@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/tx
+       http://www.springframework.org/schema/tx/spring-tx.xsd
+       http://www.springframework.org/schema/aop
+       https://www.springframework.org/schema/aop/spring-aop.xsd
+       http://www.springframework.org/schema/mvc
+       http://www.springframework.org/schema/cache/spring-mvc.xsd">
+    <!--1.指定数据库文件-->
+    <context:component-scan base-package="hb.rj"/>
+    <!--2.配置数据库信息-->
+    <context:property-placeholder location="classpath:jdbc.properties"/>
+    <!--3.配置数据库信息-->
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <property name="driverClass" value="${jdbc.driver}"/>
+        <property name="jdbcUrl" value="${jdbc.url}"/>
+        <property name="user" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+    </bean>
+    <!--4.配饰SqlSessionFactoryBeah和分页插件-->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="plugins">
+            <array>
+                <bean class="com.github.pagehelper.PageInterceptor">
+                    <property name="properties">
+                        <props>
+                            <!--设置用哪个数据库-->
+                            <prop key="helperDialect">mysql</prop>
+                            <!--设置默认可以处理页面异常-->
+                            <prop key="reasonable">true</prop>
+                        </props>
+                    </property>
+                </bean>
+            </array>
+        </property>
+        <property name="mapperLocations" value="classpath:/hb/rj/dao/mapper/*.xml"/>
+    </bean>
+
+    <!--5.配置mybatis-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+        <property name="basePackage" value="hb.jr.dao.mapper"/>
+    </bean>
+    <!--6.配置Mybatis的SqlSessionTemplate-->
+    <bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
+        <constructor-arg ref="sqlSessionFactory"/>
+    </bean>
+
+    <bean id="goods" class="hb.rj.dao.entity.Goods" scope="prototype"/>
+    <!--创建Page对象-->
+    <bean id="page" class="hb.rj.util.Page"/>
+    <!--创建一个分页工具对象-->
+    <bean id="pageUtil" class="hb.rj.util.PageUtil">
+        <property name="page" ref="page"/>
+    </bean>
+    <!--配置fileUpload-->
+    <bean id="fileUpload" class="hb.rj.util.FileUpload" scope="prototype"/>
+    <!--创建一个服务层对象-->
+<!--    <bean id="goodsMapper" class="hb.rj.service.GoodsService"/>-->
+    <bean id="goodsService" class="hb.rj.service.GoodsService" scope="prototype">
+        <property name="goods" ref="goods"/>
+        <property name="goodsMapper" ref="goodsMapper"/>
+        <property name="pageUtil" ref="pageUtil"/>
+        <property name="fileUpload" ref="fileUpload"/>
+     </bean>
+
+</beans>

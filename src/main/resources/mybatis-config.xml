@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC
+        "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <settings>
+        <setting name="logImpl" value="log4j"/>
+    </settings>
+    <plugins>
+        <!-- 设置分页插件-->
+        <plugin interceptor="com.github.pagehelper.PageInterceptor"></plugin>
+    </plugins>
+    <!--数据库的部分整合到Spring配置文件种类，这里不在配置-->
+    <mappers>
+        <!--引入映射文件-->
+        <package name="hb.rj.dao.mapper"/>
+    </mappers>
+</configuration>

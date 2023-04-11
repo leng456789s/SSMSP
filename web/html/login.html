@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>登录</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=0.5,maximum-scale=1.0,initial-scale=1.0,user-scalable=no" />
+    <!--外接样式表-->
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <!--自己定义的css-->
+    <link rel="stylesheet" href="../css/style.css" />
+    <!--鼠标悬浮显示下拉菜单的css-->
+    <link rel="stylesheet" href="../css/extend.css" />
+    <!--两个框架-->
+    <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.js"></script>
+</head>
+<body style="background-image: url(../img/dlbj.png);
+             background-position: center;
+             background-repeat: no-repeat;
+             background-attachment: fixed;
+             background-color: sandybrown;
+            ">
+<!--插入分离出来的菜单--->
+<iframe src="navbar.html" style="visibility: hidden"
+        onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"
+        class="col-md-12"
+></iframe>
+       <div>
+           <div style="text-align: center;width: 40%;margin-top: 10%;margin-left:30%;border: red 2px solid;border-radius: 10px">
+               <div style="text-align: center;width:90%;margin-top: 0%;margin-left:5%;">
+                   <h1 style="color: white">欢迎光临本店</h1>
+                   <form action="login" method="post" οnsubmit="return false">
+                       <div style="margin-top: 5px">
+                           <div style="text-align: left">
+                               <label style="font-size: 20px;">用户名称: </label>
+                           </div><input id="username" name="username" class="form-control"  type="text" width="70%"/>
+                       </div>
+                       <div style="margin-top: 5px">
+                           <div style="text-align: left">
+                               <label style="font-size: 20px">密   码: </label>
+                           </div><input name="password" class="form-control"  type="password" width="70%"/>
+                       </div>
+                       <div>
+                           <div style="text-align: left">
+                               <label style="font-size: 20px">验证码:</label>
+                           </div><input id="code_text" name="code_text" class="form-control"  type="text" width="70%"/>
+                           <div style="margin-top: 5px;">
+                               <label color="red" id="label1"></label>
+                               <img src="Yzm" id="img_src" />
+                               <a href="javascript:changeYzm()">换一张</a>
+                           </div>
+                       </div>
+                       <div style="margin-top: 5px;width: 100%;margin-top: 25px;height: 40px">
+                           <div style="margin-top:5px">
+                               <button id="B_submit" class="btn btn-info" >登录</button>
+                               <button type="reset" class="btn btn-warning">清空</button>
+                               <button id="button1" class="btn btn-danger">返回首页</button>
+                           </div>
+                       </div>
+                   </form>
+               </div>
+           </div>
+       </div>
+</body>
+<script>
+    $(
+        function () {
+            $("#username").focus(); //网页打开时，用户名input获得输入焦点
+        }
+    )
+    $("#button1").click(function () {
+        $("form").submit(function () {  //取消提交
+            return false;
+        })
+        location.href = "/index.html"
+    })
+    $("#code_text").blur(function () {
+        $.post(
+            "CheckYzm",
+            {code_text:$("#code_text").val()},
+            function (data) {
+                if (data == "F") {
+                    $("#label1").text("验证码错误")
+                }else{
+                    $("#label1").empty()
+                }
+            }
+        )
+    })
+    $("#B_submit").click(function () {
+        $("form").submit();
+    })
+    $("form").submit(function () {
+        if ($("#label1").text()=="验证码错误"){
+            return false
+        }else{
+            return true
+        }
+    })
+    function changeYzm() {
+        let  imgElem=document.getElementById("img_src");
+        imgElem.src="http://localhost:8080/Yzm?a="+new Date().getTime();
+        $("#label1").empty()
+    }
+</script>
+</html>

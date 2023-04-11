@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>星巴克</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=0.5,maximum-scale=1.0,initial-scale=1.0,user-scalable=no" />
+    <!--外接样式表-->
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <!--自己定义的css-->
+    <link rel="stylesheet" href="../css/style.css" />
+    <!--鼠标悬浮显示下拉菜单的css-->
+    <link rel="stylesheet" href="../css/extend.css" />
+    <!--两个框架-->
+    <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.js"></script>
+</head>
+<script>
+    // function isLoad() {
+    //     let iframe = document.getElementById("iframe");
+    //     if (iframe.attachEvent) {
+    //         iframe.attachEvent("onload", function () {
+    //             iframe.style.visibility = "";
+    //         });
+    //     } else {
+    //         iframe.onload = function () {
+    //             iframe.style.visibility = "";
+    //         };
+    //     }
+    // }
+</script>
+<body style="background-color: black">
+    <!--插入分离出来的菜单--->
+    <iframe src="navbar.html" style="visibility: hidden"
+            onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"
+            class="col-md-12"
+    ></iframe>
+    <!--    onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"-->
+    <!--Jsp中的用法-->
+    <!--    <%@ include file ="navbar.html"%> -->
+    <!--网页主体部分-->
+    <style>
+        hr{
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+        H4,p {
+            color:black;
+            background-color: white;
+            overflow:hidden;
+            text-overflow:ellipsis;
+            /*white-space: nowrap;*/   /* 只显示一行，超出的用省略号替代*/
+            display: -webkit-box;         /*启用-webkit-box 显示指定行的内容，超出部分用省略号代替*/
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp:8;    /*不管多少行，只显示8行。*/
+        }
+        .newsArea{
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .news{
+            border: white 3px solid;
+            border-radius: 2px;
+            background-color: white;
+            width: 100%;
+            height: 260px;
+            /*height: auto;*/
+        }
+    </style>
+    <div class="col-md-12" style="text-align: center;background-color: black"><br>
+        <div class="row" style="text-align: center;color:white;">
+            <h2>最新店情发布</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-6 newsArea">
+                <div class="container news">
+                    <H4>标题一</H4>
+                    <h10>2022年11月24日</h10>
+                    <hr>
+                    <p>
+                        演示超出的行数不显示
+                        演示超出的行数不显示
+                        演示超出的行数不显示
+                        演示超出的行数不显示
+                        演示超出的行数不显示
+                        热烈庆祝裕华路店开业
+                        热烈庆祝裕华路店开业
+                        热烈庆祝裕华路店开业
+                        热烈庆祝裕华路店开业
+                        热烈庆祝裕华路店开业
+                        热烈庆祝裕华路店开业
+                        热烈庆祝裕华路店开业
+                        热烈庆祝裕华路店开业
+                        热烈庆祝裕华路店开业
+                        热烈庆祝裕华路店开业
+                        热烈庆祝裕华路店开业
+                        热烈庆祝裕华路店开业
+                        热烈庆祝裕华路店开业
+                        热烈庆祝裕华路店开业
+                        热烈庆祝裕华路店开业
+                        热烈庆祝裕华路店开业
+                        热烈庆祝裕华路店开业
+                        热烈庆祝裕华路店开业
+                        热烈庆祝裕华路店开业
+                        热烈庆祝裕华路店开业
+                        热烈庆祝裕华路店开业
+                        热烈庆祝裕华路店开业
+                        热烈庆祝裕华路店开业
+                        热烈庆祝裕华路店开业
+                        热烈庆祝裕华路店开业
+                        热烈庆祝裕华路店开业
+                        热烈庆祝裕华路店开业
+                        热烈庆祝裕华路店开业
+                        热烈庆祝裕华路店开业
+                        热烈庆祝裕华路店开业
+                        热烈庆祝裕华路店开业
+                        热烈庆祝裕华路店开业
+                        热烈庆祝裕华路店开业
+                        热烈庆祝裕华路店开业
+                        热烈庆祝裕华路店开业
+                        热烈庆祝裕华路店开业
+                        热烈庆祝裕华路店开业
+                        热烈庆祝裕华路店开业
+                        热烈庆祝裕华路店开业
+                        热烈庆祝裕华路店开业
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 newsArea">
+                <div class="container  news">
+                    <H4>标题二</H4>
+                    <h10>2022年11月24日</h10>
+                    <hr>
+                    <p>
+                        热烈庆祝软件学院店开业
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 newsArea">
+                <div class="container news">
+                    <H4>标题三</H4>
+                    <h10>2022年11月24日</h10>
+                    <hr>
+                    <p>
+                        热烈庆祝裕高新区店开业
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 newsArea">
+                <div class="container  news">
+                    <H4>标题四</H4>
+                    <h10>2022年11月24日</h10>
+                    <hr>
+                    <p>
+                        研发中心新品加开发中。
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!--页脚部分-->
+        <div class="col-md-12">
+
+        </div>
+    </div>
+</body>
+</html>

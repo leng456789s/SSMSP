@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+<!--		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />-->
+		<title>星巴克</title>
+		<meta name="viewport" content="width=device-width,minimum-scale=0.5,maximum-scale=1.0,initial-scale=1.0,user-scalable=no" />
+		<!--外接样式表-->
+		<link rel="stylesheet" href="../css/bootstrap.css" />
+		<!--自己定义的css-->
+		<link rel="stylesheet" href="../css/style.css" />
+		<!--鼠标悬浮显示下拉菜单的css-->
+		<link rel="stylesheet" href="../css/extend.css" />
+		<!--两个框架-->
+		<script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="../js/bootstrap.js"></script>
+	</head>
+	<body bgcolor="black">
+<!--	响应式菜单。-->
+		<nav class="navbar-default navbar-inverse" style="text-align: center;">
+			<div class="navbar-header">
+				<br />
+				<button class="navbar-toggle" data-toggle="collapse" data-target="#res-nav" style="color: white;">
+					<!--按钮中的横线-->
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+				<a href="nav.html" class="navbar-brand" style="padding-top: 0px;font-size: 25px"><strong>彼岸<br></strong></a>
+				<a href="index.jsp" class="navbar-brand" style="padding-top: 20px;font-size: 25px"><strong>夏空<br></strong></a>
+			</div>
+			<div class="collapse navbar-collapse" id="res-nav">
+				<ul class="nav  navbar-nav">
+					<li>
+						<a href="index.jsp"><br>主页<br><strong>HOME</strong></a>
+					</li>
+					<li>
+						<a href="about.html"><br>关于我们<br><strong>ABOUT</strong></a>
+					</li>
+					<li>
+						<a href="News.html"><br>新闻中心<br><strong>NEWS</strong></a>
+					</li>
+					<li>
+						<a href="contact.html"><br>联系方式<br><strong>CONTACT</strong></a>
+					</li>
+				</ul>
+				<br />
+				<form action="" class="navbar-form navbar-left" style="outline: none;">
+					<input type="text" placeholder="输入搜索内容" class="form-control" />
+					<button type="submit">
+						<span class="btn btn-default">搜索</span>
+					</button>
+				</form>
+				<a href="#" class="btn navbar-btn btn-success btn-md navbar-right hidden-xs">星巴克</a>
+				<div class="navbar-right collapse navbar-collapse">
+					<ul class="nav navbar-nav hidden-xs" style="color: white;">
+					    <li>
+							<a href="reg.jsp">注册</a>
+						</li>
+						<li>
+							<a href="login.html">登陆</a>
+						</li>
+						<li>
+							<a href="#">你好，空夏</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+<!-- 网页主体区域-->
+<!--1.左侧菜单  12栅格 占2格-->
+		<div class="col-md-2" style="background-image: url(../img/721.png);
+                                     background-size: 100% 100%;
+                                     border: orange 1px solid;
+                                    ">
+				<h1 style="color: greenyellow;text-align: right;margin-right: 18%;">菜单</h1>
+			    <br>
+				<ul style="font-size: 20px;list-style:none;">
+					<li class="active" style="padding-top: 20px;">
+						<a href="#">季度精选</a>
+					</li>
+					<li style="padding-top: 20px;">
+						<a href="#">奶茶</a>
+					</li>
+					<li style="padding-top: 20px;">
+						<a href="#">美食</a>
+					</li>
+					<li style="padding-top: 20px;">
+						<a href="#">咖啡</a>
+					</li>
+					<li style="padding-top: 20px;">
+						<a href="#">其它</a>
+					</li>
+				</ul>
+			    <br/>
+			    <br/>
+		</div>
+<!--2.右侧展示区域 12栅格 占10格-->
+		<div class="col-md-10" style="text-align: center;border: red 1px solid">
+			<H1>欢迎来到星巴克</H1>
+			<div style="text-align: center;border: blue 1px solid">
+				<a href="#">
+					<img src="../img/4.jpg" alt="第四张" width="100%">
+				</a>
+				<h1>星巴克玩味冰调™，开启轻盈一夏</h1>
+				<br />
+				<p>这一季，我们带着探索与发现的好奇心， 来一场视觉与味觉的双重碰撞。<br />
+					玩味冰调作为今夏全新的产品品类登场， 以鸡尾酒为灵感，突破茶与咖啡的传统定义， 精心调制出富于层次感的全新饮品。<br />
+					零脂、真材实料、不添加化学合成色素和甜味剂， 满足身为潮人的你，对“美味”和“零负担”的双重标准。
+				</p>
+			</div>
+			<div style="text-align: center;border: blue 1px solid">
+				<a href="#">
+					<img src="../img/56.png" alt="第56张" width="100%">
+				</a>
+				<h1>一口轻盈 一口夏天</h1>
+				<br />
+				<p>全新星轻盈系列，蛋糕也可以清爽一夏无负担。 采用风味酸奶为原料，搭配大颗真实果粒，清新轻甜，
+					<br /> 满足想吃甜点的小心思新口味“茶瓦纳桃桃千层蛋糕” 轻甜的奶油融入白桃果肉，
+					<br/>不但丰富了口感，更让桃子风味在口中久久留香， 满满的初夏味道。
+				</p>
+			</div>
+			<div style="text-align: center;border: blue 1px solid">
+				<a href="#">
+					<img src="../img/000.png" alt="第000张" width="100%">
+				</a>
+				<h1>冰沁一夏好时光</h1>
+				<br/>
+				<p>延续星巴克冰杯的外形，不同的水果亮片漂浮在卡片内部， 动静之间炫彩缤纷，宛如一杯新鲜果味冰饮一般。内置芯片，
+				   可以直接刷卡消费。 人鱼系列作为纪念款，延续该系列的设计， 配合夏季的主题采用以海蓝色为主基调，<br/>
+				   辅以海底的美妙景色带来阵阵夏日凉意。 随机赠送美型胶带印章挂件， 共三款可选。<br/>
+				</p>
+			</div>
+			<div style="text-align: center;border: blue 1px solid">
+				<a href="#">
+					<img src="../img/65.png" alt="第65张" width="100%">
+				</a>
+				<h1>晴空音乐节</h1>
+				<br />
+				<p>我们热爱音乐，如同热爱咖啡一样。在这个初夏，
+					还有比带着一杯星巴克去音乐节更酷的选择吗？<br />
+					让音乐充满你的心，发现更加活力的自己， 无论世界如何变化，
+					咖啡与音乐是享受当下最in的生活态度。
+					自造自我，<br/>Love & Peace。
+				</p>
+			</div>
+		</div>
+	</body>
+</html>

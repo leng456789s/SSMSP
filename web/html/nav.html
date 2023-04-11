@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>彼岸咖啡</title>
+		<meta name="viewport" content="width=device-width,minimum-scale=0.5,maximum-scale=1.0,initial-scale=1.0,user-scalable=no" />
+		<!--外接样式表-->
+		<link rel="stylesheet" href="../css/bootstrap.css" />
+		<!--自己定义的css-->
+		<link rel="stylesheet" href="../css/style.css" />
+		<!--鼠标悬浮显示下拉菜单的css-->
+		<link rel="stylesheet" href="../css/extend.css" />
+		<!--两个框架-->
+		<script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="../js/bootstrap.js"></script>
+		<style type="text/css">
+			body {
+				background-color: rgb(249, 229, 229);
+			}
+		</style>
+		<script type="text/javascript">
+			$(function() {
+				//轮播图自动播放
+				$('#lunbotu').carousel({
+					interval: 3000, //自动播放3s
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<nav class="navbar-default navbar-inverse " style="text-align: center;">
+			<div class="navbar-header">
+				<br />
+				<button class="navbar-toggle" data-toggle="collapse" data-target="#res-nav" style="color: white;">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+				<a href="nav.html" class="navbar-brand" style="padding-top: 20px;font-size: 25px"><strong>彼岸<br></strong></a>
+				<a href="index.jsp" class="navbar-brand" style="padding-top: 0px;font-size: 25px"><strong>夏空<br></strong></a>
+			</div>
+			<div class="collapse navbar-collapse" id="res-nav">
+				<ul class="nav  navbar-nav">
+					<li>
+						<a href="index.jsp"><br>主页<br><strong>HOME</strong></a>
+					</li>
+					<li>
+						<a href="about.html"><br>关于我们<br><strong>ABOUT</strong></a>
+					</li>
+					<li>
+						<a href="News.html"><br>新闻中心<br><strong>NEWS</strong></a>
+					</li>
+					<li>
+						<a href="contact.html"><br>联系方式<br><strong>CONTACT</strong></a>
+					</li>
+				</ul>
+				<br />
+				<form action="" class="navbar-form navbar-left" style="outline: none;">
+					<input type="text" placeholder="输入搜索内容" class="form-control" />
+					<button type="submit">
+						<span class="btn btn-default">搜索</span>
+					</button>
+				</form>
+				<a href="#" class="btn navbar-btn btn-success btn-md navbar-right hidden-xs">星巴克</a>
+				<div class="navbar-right">
+					<ul class="nav navbar-nav hidden-xs" style="color: white;">
+						<li>
+							<a href="#">注册</a>
+						</li>
+						<li>
+							<a href="#">登陆</a>
+						</li>
+						<li>
+							<a href="#">你好，空夏</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="col-md-2 hidden-xs hidden-sm" style="background-image: url(../img/406.png);font-size: 20px;">
+			<h1 style="color: green;text-align: center">热门推荐</h1>
+			<ul style="font-size: 20px;">
+				<li>
+					<a href="#">现磨咖啡</a>
+				</li>
+				<br />
+				<li>
+					<a href="#">进口咖啡</a>
+				</li>
+				<br />
+				<li>
+					<a href="#">速溶咖啡</a>
+				</li>
+				<br />
+				<li>
+					<a href="#">经典咖啡</a>
+				</li>
+				<br />
+				<li>
+					<a href="#">点心类</a>
+				</li>
+			</ul>
+		</div>
+		<div class="col-md-10">
+			    <br/>
+			    <!--设置轮播图容器-->
+			    <div id="lunbotu" class="carousel slide">
+					<!--设置轮播图-->
+					<ol class="carousel-indicators">
+						<li data-target="#lunbotu" data-slide-to="0" class="active"></li>
+						<li data-target="#lunbotu" data-slide-to="1"></li>
+						<li data-target="#lunbotu" data-slide-to="2"></li>
+						<li data-target="#lunbotu" data-slide-to="3"></li>
+					</ol>
+					<div class="carousel-inner">
+							<div class="item active">
+								<a href="#">
+									<img src="../img/1.jpg" alt="第一张" width="100%">
+								</a>
+							</div>
+							<div class="item">
+								<a href="#">
+									<img src="../img/2.jpg" alt="第二张" width="100%">
+								</a>
+							</div>
+							<div class="item">
+								<a href="#">
+									<img src="../img/3.jpg" alt="第三张" width="100%">
+								</a>
+							</div>
+							<div class="item">
+								<a href="#">
+									<img src="../img/4.jpg" alt="第四张" width="100%">
+								</a>
+							</div>
+							<a href="#lunbotu" data-slide="prev" class="left carousel-control">
+								<span class="glyphicon glyphicon-chevron-left"></span>
+							</a>
+							<a href="#lunbotu" data-slide="next" class="right carousel-control">
+								<span class="glyphicon glyphicon-chevron-right"></span>
+							</a>
+					</div>
+				</div>
+				<div class="visible-xs  alert-info" style="font-size: 30px; color: white;background-image: url(../img/406.png);">
+					<h2 style="text-align: center">今日特价推荐拿铁咖啡哦</h2>
+				</div>
+				<div class="col-md-4">
+					<br/>
+					<a href="#">
+						<img src="../img/7.png" alt="第七张" width="100%">
+					</a>
+				</div>
+				<div class="col-md-4">
+					<br />
+					<a href="#">
+						<img src="../img/5.png" alt="第五张" width="100%">
+					</a>
+				</div>
+				<div class="col-md-4 ">
+					<br />
+					<a href="#">
+						<img src="../img/6.png" alt="第六张" width="100%">
+					</a>
+				</div>
+				<div class="col-md-12">
+					<h2 style="text-align: center"><em>星巴克精选</em></h2>
+					<br />
+					<p style="font-size: 18px;text-align: center">在星巴克天猫旗舰店发现更多咖啡心意</p>
+				</div>
+				<div class="col-md-3">
+					<a href="#">
+						<img src="../img/11.jpg" alt="第11张" height="152px" width="214px">
+					</a>
+					<h1>会员星礼包</h1>
+					<br />
+					<p>星享卡新升级</p>
+					<p>更多心意好礼</p>
+					<a href="#" style="color: red;">了解更多</a>
+				</div>
+				<div class="col-md-3">
+					<a href="#">
+						<img src="../img/12.png" alt="第12张" height="152px" width="214px">
+					</a>
+					<h1>星礼卡</h1>
+					<br />
+					<p>用一份新礼</p>
+					<p>让心意相随</p>
+					<a href="#" style="color: red;">了解更多</a>
+				</div>
+				<div class="col-md-3 ">
+					<a href="#">
+						<img src="../img/13.jpg" alt="第13张" height="152px" width="214px">
+					</a>
+					<h1>电子产品卷</h1>
+					<br />
+					<p>心意</p>
+					<p>从这一杯开始</p>
+					<a href="#" style="color: red;">了解更多</a>
+				</div>
+				<div class="col-md-3 ">
+					<a href="#">
+						<img src="../img/14.jpg" alt="第14张" height="152px" width="214px">
+					</a>
+					<h1>咖啡生活</h1>
+					<br />
+					<p>星巴克</p>
+					<p>用心制作</p>
+					<a href="#" style="color: red;">了解更多</a>
+				</div>
+		</div>
+	</body>
+</html>

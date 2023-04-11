@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>星巴克</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=0.5,maximum-scale=1.0,initial-scale=1.0,user-scalable=no" />
+    <!--外接样式表-->
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <!--自己定义的css-->
+    <link rel="stylesheet" href="../css/style.css" />
+    <!--鼠标悬浮显示下拉菜单的css-->
+    <link rel="stylesheet" href="../css/extend.css" />
+    <!--两个框架-->
+    <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.js"></script>
+</head>
+<body style="background-color: black">
+        <!--	响应式菜单。-->
+        <nav class="navbar-default navbar-inverse" style="text-align: center;">
+            <div class="navbar-header">
+                <br />
+                <button class="navbar-toggle" data-toggle="collapse" data-target="#res-nav" style="color: white;">
+                    <!--按钮上的三条横线-->
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="nav.html" class="navbar-brand" style="padding-top: 0px;font-size: 25px"><strong>彼岸<br></strong></a>
+                <a href="index.jsp" class="navbar-brand" style="padding-top: 25px;font-size: 25px"><strong>夏空<br></strong></a>
+            </div>
+            <div class="collapse navbar-collapse" id="res-nav">
+                <ul class="nav  navbar-nav">
+                    <li>
+                        <a href="index.jsp"><br>主页<br><strong>HOME</strong></a>
+                    </li>
+                    <li>
+                        <a href="about.html"><br>关于我们<br><strong>ABOUT</strong></a>
+                    </li>
+                    <li>
+                        <a href="News.html"><br>新闻中心<br><strong>NEWS</strong></a>
+                    </li>
+                    <li>
+                        <a href="contact.html"><br>联系方式<br><strong>CONTACT</strong></a>
+                    </li>
+                </ul>
+                <br />
+                <form action="" class="navbar-form navbar-left" style="outline: none;">
+                    <input type="text" placeholder="输入搜索内容" class="form-control" />
+                    <button type="submit">
+                        <span class="btn btn-default">搜索</span>
+                    </button>
+                </form>
+                <a href="#" class="btn navbar-btn btn-success btn-md navbar-right hidden-xs">星巴克</a>
+                <div class="navbar-right collapse navbar-collapse">
+                    <ul class="nav navbar-nav hidden-xs" style="color: white;">
+                        <li>
+                            <a href="#">注册</a>
+                        </li>
+                        <li>
+                            <a href="#">登陆</a>
+                        </li>
+                        <li>
+                            <a href="#">你好，空夏</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--网页主体部分-->
+        <style>
+            hr{
+                margin-top: 0;
+                margin-bottom: 5px;
+            }
+            H4,p {
+                color:black;
+                background-color: white;
+                overflow:hidden;
+                text-overflow:ellipsis;
+                /*white-space: nowrap;*/   /* 只显示一行，超出的用省略号替代*/
+                display: -webkit-box;         /*启用-webkit-box 显示指定行的内容，超出部分用省略号代替*/
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp:8;    /*不管多少行，只显示8行。*/
+            }
+            .newsArea{
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+            .news{
+                border: white 10px solid;
+                border-radius: 5px;
+                background-color: white;
+                width: 100%;
+                height: 260px;
+                /*height: auto;*/
+            }
+        </style>
+        <div class="col-md-12" style="text-align: center;background-color: black"><br>
+            <div class="row">
+                <div class="col-md-6 newsArea">
+                    <div class="container news">
+                        <H4>标题一</H4>
+                        <h10>2022年11月24日</h10>
+                        <hr>
+                        <p>
+                            演示超出的行数不显示
+                            演示超出的行数不显示
+                            演示超出的行数不显示
+                            演示超出的行数不显示
+                            演示超出的行数不显示
+                            热烈庆祝裕华路店开业
+                            热烈庆祝裕华路店开业
+                            热烈庆祝裕华路店开业
+                            热烈庆祝裕华路店开业
+                            热烈庆祝裕华路店开业
+                            热烈庆祝裕华路店开业
+                            热烈庆祝裕华路店开业
+                            热烈庆祝裕华路店开业
+                            热烈庆祝裕华路店开业
+                            热烈庆祝裕华路店开业
+                            热烈庆祝裕华路店开业
+                            热烈庆祝裕华路店开业
+                            热烈庆祝裕华路店开业
+                            热烈庆祝裕华路店开业
+                            热烈庆祝裕华路店开业
+                            热烈庆祝裕华路店开业
+                            热烈庆祝裕华路店开业
+                            热烈庆祝裕华路店开业
+                            热烈庆祝裕华路店开业
+                            热烈庆祝裕华路店开业
+                            热烈庆祝裕华路店开业
+                            热烈庆祝裕华路店开业
+                            热烈庆祝裕华路店开业
+                            热烈庆祝裕华路店开业
+                            热烈庆祝裕华路店开业
+                            热烈庆祝裕华路店开业
+                            热烈庆祝裕华路店开业
+                            热烈庆祝裕华路店开业
+                            热烈庆祝裕华路店开业
+                            热烈庆祝裕华路店开业
+                            热烈庆祝裕华路店开业
+                            热烈庆祝裕华路店开业
+                            热烈庆祝裕华路店开业
+                            热烈庆祝裕华路店开业
+                            热烈庆祝裕华路店开业
+                            热烈庆祝裕华路店开业
+                            热烈庆祝裕华路店开业
+                            热烈庆祝裕华路店开业
+                            热烈庆祝裕华路店开业
+                            热烈庆祝裕华路店开业
+                        </p>
+                    </div>
+            </div>
+            <div class="col-md-6 newsArea">
+                    <div class="container  news">
+                        <H4>标题二</H4>
+                        <h10>2022年11月24日</h10>
+                        <hr>
+                        <p>
+                            热烈庆祝软件学院店开业
+                        </p>
+                    </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 newsArea">
+                <div class="container news">
+                    <H4>标题三</H4>
+                    <h10>2022年11月24日</h10>
+                    <hr>
+                    <p>
+                        热烈庆祝裕高新区店开业
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 newsArea">
+                <div class="container  news">
+                    <H4>标题四</H4>
+                    <h10>2022年11月24日</h10>
+                    <hr>
+                    <p>
+                        研发中心新品加开发中。
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!--页脚部分-->
+        <div class="col-md-12">
+
+        </div>
+</div>
+</body>
+</html>
